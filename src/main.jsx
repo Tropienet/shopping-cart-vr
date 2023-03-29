@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import ProductPage from './Pages/ProductPage'
+import RouteSwitch from './Components/RouteSwitch'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <ProductPage />
+    <RouteSwitch />
   </React.StrictMode>,
 )
