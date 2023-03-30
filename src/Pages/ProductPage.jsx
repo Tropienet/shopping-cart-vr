@@ -1,7 +1,9 @@
+import ProductCard from "../Components/ProductCard"
+
 const ProductPage = () => {
     return (
         <div>
-            <p>This is the Product Page</p>
+            <p>Product page</p>
         </div>
     )
 }
