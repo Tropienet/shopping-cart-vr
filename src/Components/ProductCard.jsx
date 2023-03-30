@@ -6,7 +6,7 @@ const ProductCard = (props) => {
             <h2 className="product-name">{props.name}</h2>
             <img src={props.src}></img>
             <p className="set-abrv">{props.abrv}</p>
-            <p className="price">{props.price}</p>
+            <p className="price">${props.price}</p>
             <button className="add-btn">Add to cart</button>
         </div>
     )
