@@ -1,6 +1,6 @@
 import ProductCard from "../Components/ProductCard"
 import products from "../Common/products"
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 
 const ProductPage = () => {
     const [productArray, setProductArray] = useState([])
