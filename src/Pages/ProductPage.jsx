@@ -1,6 +1,7 @@
 import ProductCard from "../Components/ProductCard"
 import products from "../Common/products"
 import { useContext, useEffect, useState } from "react"
+import  { Link } from "react-router-dom"
 
 const ProductPage = () => {
     const [productArray, setProductArray] = useState([])
@@ -15,6 +16,7 @@ const ProductPage = () => {
 
     return (
         <div className="product-container">
+            <Link to="/cart">Cart</Link>
             {productArray.map(product => (
                 <ProductCard    name={product.name}
                                 src={product.src}
