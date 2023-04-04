@@ -31,8 +31,10 @@ const CartPage = () => {
             <p>This is the cart Page</p>
             {cart.map(product => (
                <CardProductCard key={uuidv4()}
-                                name={product.name} />
+                                name={product.name}
+                                 />
             ))}
+            Price
         </div>
     )
 }
