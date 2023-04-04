@@ -26,9 +26,14 @@ const CartPage = () => {
             let cartPriceTotal = 0;
             let obi = new Object()
             obi.name = product.name
-            obi.quantity = 0
             obi.totalPrice = 0
             obi.src = "";
+            Object.defineProperty(obi, "quantity", {
+                value: 0,
+                configurable: true,
+                enumerable: true,
+                writable: true
+            })
             cart.forEach(cartItem => {
                 if(product==cartItem) {
                     obi.quantity += 1
@@ -46,20 +51,25 @@ const CartPage = () => {
         calculateQuantAndPrice();
     }, [])
 
+    function reduceQuantity(quant) {
+        return quant - 1
+    }
+
     return (
         <div>
             <header>
                 <Link to="/">Homepage</Link>
             </header>
             {productsQuantPrice.map(product => (
+                <div>
                <CardProductCard key={uuidv4()}
                                 name={product.name}
                                 quantity={product.quantity}
                                 src={product.src}
                                 totalPrice={product.totalPrice.toFixed(2)}
                                  />
+                </div>
             ))}
-            <p>Total price: {totalPrice}</p>
         </div>
     )
 }
