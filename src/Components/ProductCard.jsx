@@ -1,5 +1,6 @@
 import React, { useContext } from "react"
 import { CartContext } from "./RouteSwitch";
+import "../Layouts/ProductCardLayout.css"
 
 const ProductCard = (props) => {
     let cart = useContext(CartContext)
@@ -9,7 +10,7 @@ const ProductCard = (props) => {
     }
 
     return (
-        <div>
+        <div className="product-card">
             <h2 className="product-name">{props.name}</h2>
             <img src={props.src}></img>
             <p className="set-abrv">{props.abrv}</p>
