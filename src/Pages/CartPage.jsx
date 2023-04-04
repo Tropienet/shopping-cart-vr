@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../Components/RouteSwitch";
 import { v4 as uuidv4 } from "uuid"
 import CardProductCard from "../Components/CartProductCard";
+import { Link } from "react-router-dom";
 
 const CartPage = () => {
     const cart = useContext(CartContext)
@@ -28,13 +29,15 @@ const CartPage = () => {
 
     return (
         <div>
+            <header>
+                <Link to="/">Homepage</Link>
+            </header>
             <p>This is the cart Page</p>
             {cart.map(product => (
                <CardProductCard key={uuidv4()}
                                 name={product.name}
                                  />
             ))}
-            Price
         </div>
     )
 }
